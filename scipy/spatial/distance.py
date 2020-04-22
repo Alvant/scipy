@@ -2116,20 +2116,20 @@ def squareform(X, force="no", checks=True):
 
     Notes
     -----
-    1. v = squareform(X)
+    1. ``v = squareform(X)``
 
-       Given a square d-by-d symmetric distance matrix X,
-       ``v = squareform(X)`` returns a ``d * (d-1) / 2`` (or
-       :math:`{n \\choose 2}`) sized vector v.
+       Given a square n-by-n symmetric distance matrix X,
+       ``v = squareform(X)`` returns a
+       :math:`{n \\choose 2} = n * (n-1) / 2` sized vector v.
 
       :math:`v[{n \\choose 2}-{n-i \\choose 2} + (j-i-1)]` is the distance
       between points i and j. If X is non-square or asymmetric, an error
       is returned.
 
-    2. X = squareform(v)
+    2. ``X = squareform(v)``
 
-      Given a ``d*(d-1)/2`` sized v for some integer ``d >= 2`` encoding
-      distances as described, ``X = squareform(v)`` returns a d by d distance
+      Given a :math:`n * (n-1) / 2` sized v for some integer :math:`d >= 2` encoding
+      distances as described, ``X = squareform(v)`` returns a n-by-n distance
       matrix X.  The ``X[i, j]`` and ``X[j, i]`` values are set to
       :math:`v[{n \\choose 2}-{n-i \\choose 2} + (j-i-1)]` and all
       diagonal elements are zero.
